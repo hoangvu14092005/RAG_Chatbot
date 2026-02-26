@@ -1,0 +1,16 @@
+services:
+  db:
+    image: pgvector/pgvector:pg17-trixie
+    container_name: rag_db
+    environment:
+      - POSTGRES_USER=admin
+      - POSTGRES_PASSWORD=secret
+      - POSTGRES_DB=rag_db
+      - TZ=Asia/Ho_Chi_Minh
+    ports:
+      - "5432:5432"
+    volumes:
+      - psql_data:/var/lib/postgresql/data
+
+volumes:
+  psql_data:
