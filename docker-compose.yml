@@ -8,7 +8,7 @@ services:
       - POSTGRES_DB=rag_db
       - TZ=Asia/Ho_Chi_Minh
     ports:
-      - "5432:5432"
+      - "5433:5432"
     volumes:
       - psql_data:/var/lib/postgresql/data
 
